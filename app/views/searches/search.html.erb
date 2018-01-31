@@ -1,0 +1,30 @@
+<h1>Analyze the tone of a passage</h1>
+<h2>Powered by Watson</h2>
+
+<div class="container centered">
+  <%= form_tag '/search' do %>
+    <%= label_tag :text %>
+    <%= text_area_tag :text, nil, rows: 10, style: 'width:100%' %>
+    <%= submit_tag "Analyze!" %>
+  <% end %>
+</div>
+
+<div>
+  <p><%= @text if @text %></p>
+  <% if @error %> 
+    <p><%= @error %></p>
+  <% elsif @tones %> 
+    <% if @tones.empty? %>
+      <p>No tones detected</p>
+    <% else %>
+      <h3>Detected tone(s)</h3>
+      <ul>
+        <% @tones.each do |tone| %> 
+          <li>
+            <%= tone["tone_name"] %>: <%= tone["score"] %><br>
+          </li>
+        <% end %> 
+      </ul>
+    <% end %> 
+  <% end %> 
+</div>
