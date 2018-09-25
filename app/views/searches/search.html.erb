@@ -1,12 +1,22 @@
-<h1>Analyze the tone of a passage</h1>
-<h2>Powered by Watson</h2>
+<div class="ui row">
+  <div class="centered eleven wide column">
+    <h1>Analyze the tone of a passage</h1>
+  </div>
+</div>
+<div class="ui row">
+  <div class="centered ten wide column">
+    <h2>Powered by Watson</h2>
+  </div>
+</div>
 
-<div class="container centered">
-  <%= form_tag '/search' do %>
-    <%= label_tag :text %>
-    <%= text_area_tag :text, nil, rows: 10, style: 'width:100%' %>
-    <%= submit_tag "Analyze!" %>
-  <% end %>
+<div class="centered row">
+  <div class="centered ten wide column">
+    <%= form_tag '/search' do %>
+      <%= label_tag :text, "Enter your text below" %>
+      <%= text_area_tag :text, nil, rows: 10, style: 'width:100%' %>
+      <%= submit_tag "Analyze!", class: "ui button" %>
+    <% end %>
+  </div>
 </div>
 
 <div>

@@ -1,0 +1,19 @@
+// Google Fonts 
+@import url('https://fonts.googleapis.com/css?family=Cabin|Unlock'); 
+
+$cabin: 'Cabin', serif; 
+$unlock: 'Unlock', sans-serif; 
+
+body {
+  margin-top: 20px; 
+}
+
+h1 {
+  font: 100% $unlock; 
+  font-size: 3em; 
+}
+
+h2 {
+  font: $cabin; 
+  font-size: 1em; 
+}
